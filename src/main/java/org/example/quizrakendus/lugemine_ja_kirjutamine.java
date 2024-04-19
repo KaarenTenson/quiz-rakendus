@@ -34,11 +34,21 @@ public class lugemine_ja_kirjutamine {
         }
         return projektid;
     }
-    private static void kirjutaprojektid(ArrayList<quiz> projektid){
+    public static void kirjutaprojektid(ArrayList<quiz> projektid){
         try (
                 BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt",Charset.defaultCharset()))) {
             for(int i=0;i<projektid.size();i++){
             puhverdatud.write(projektid.get(i).getNimi());}
+            // loeb järgmise rea. kui ei saa, tagastab nulli
+        }   catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static void lisaprojektid(ArrayList<quiz> projektid){
+        try (
+                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt", Charset.defaultCharset(), true))) {
+            for(int i=0;i<projektid.size();i++){
+                puhverdatud.write(projektid.get(i).getNimi());}
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
             throw new RuntimeException(e);
