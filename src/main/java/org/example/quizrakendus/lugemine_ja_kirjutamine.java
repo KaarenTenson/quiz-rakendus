@@ -1,6 +1,7 @@
 package org.example.quizrakendus;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,10 @@ public class lugemine_ja_kirjutamine {
         }
     }
     public static void main(String[] args) throws IOException {
-        quiz esimen=new quiz("test",new ArrayList<>(),0);
+        String[] flashcard = {"küsimus", "vastus"};
+        List<String[]> flashcardid = new ArrayList<>();
+        flashcardid.add(flashcard);
+        quiz esimen=new quiz("test",flashcardid,1);
         esimen.kirjuta();
     }
 }
