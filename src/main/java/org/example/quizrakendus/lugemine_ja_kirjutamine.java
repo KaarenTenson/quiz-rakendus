@@ -44,11 +44,10 @@ public class lugemine_ja_kirjutamine {
             throw new RuntimeException(e);
         }
     }
-    public static void lisaprojektid(ArrayList<quiz> projektid){
+    public static void lisaprojektid(String projekt){
         try (
                 BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt", Charset.defaultCharset(), true))) {
-            for(int i=0;i<projektid.size();i++){
-                puhverdatud.write(projektid.get(i).getNimi());}
+                puhverdatud.write(projekt);
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
             throw new RuntimeException(e);
