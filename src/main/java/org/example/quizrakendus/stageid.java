@@ -43,7 +43,7 @@ public class stageid {
         TextField kusimus = new TextField();
         TextField vastus= new TextField();
         Button nupp=new Button("Salvesta");
-        Label label = new Label("Sisesta projekt");
+        Label label = new Label("Sisesta projekti oiasjdkojsad");
         EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
