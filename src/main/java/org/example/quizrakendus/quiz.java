@@ -3,6 +3,7 @@ package org.example.quizrakendus;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 public class quiz {
@@ -47,6 +48,20 @@ public class quiz {
 
     public List<String[]> getFlashcards() {
         return flashcards;
+    }
+
+    @Override
+    public String toString() {
+        return "quiz{" +
+                "nimi='" + nimi + '\'' +
+                ", flashcards=" + flashcards +
+                ", arv=" + arv +
+                '}';
+    }
+    public void valjasta(){
+        for (String[] el:flashcards){
+            System.out.println(Arrays.toString(el));
+        }
     }
 
     public void setFlashcards(List<String[]> flashcards) {
