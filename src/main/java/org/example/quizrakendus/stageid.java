@@ -28,7 +28,7 @@ public class stageid {
             {
                 label.setText("salvestatud");
                 lugemine_ja_kirjutamine.lisaprojektid(nimi.getText());
-                stage.setScene(lisaflash(nimi.getText()));
+                stage.setScene(lisaflash(nimi.getText(),stage));
             }
         };
         nupp.setOnAction(event2);
