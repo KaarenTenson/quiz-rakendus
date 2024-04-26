@@ -19,26 +19,26 @@ public class lugemine_ja_kirjutamine {
             return new quiz(projekt,kaartidelist,arv);
         }
     }
-    private static List<String> leiaprojektid(){
+    public static List<String> leiaprojektid(){
         List<String> projektid = new ArrayList<>();
         try (InputStream baidid = new FileInputStream("Projektid.txt");
              InputStreamReader tekst = new InputStreamReader(baidid, Charset.defaultCharset());
              BufferedReader puhverdatud = new BufferedReader(tekst)) {
             String rida = puhverdatud.readLine();
             while (rida != null) {
-                rida = puhverdatud.readLine(); // loeb järgmise rea. kui ei saa, tagastab nulli
                 projektid.add(rida);
+                rida = puhverdatud.readLine(); // loeb järgmise rea. kui ei saa, tagastab nulli
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return projektid;
     }
-    public static void kirjutaprojektid(ArrayList<quiz> projektid){
+    public static void kirjutaUle(String[] projektid){
         try (
-                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt",Charset.defaultCharset()))) {
-            for(int i=0;i<projektid.size();i++){
-            puhverdatud.write(projektid.get(i).getNimi());}
+                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("Projektid.txt",Charset.defaultCharset()))) {
+            for(int i=0;i<projektid.length;i++){
+            puhverdatud.write(projektid[i]);}
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
             throw new RuntimeException(e);
@@ -46,7 +46,8 @@ public class lugemine_ja_kirjutamine {
     }
     public static void lisaprojektid(String projekt){
         try (
-                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt", Charset.defaultCharset(), true))) {
+                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("Projektid.txt", Charset.defaultCharset(), true))) {
+
                 puhverdatud.write(projekt);
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
@@ -54,7 +55,14 @@ public class lugemine_ja_kirjutamine {
         }
     }
     public static void main(String[] args) throws IOException {
-        quiz esimen=new quiz("test",new ArrayList<>(),0);
+        String[] uus={"mis see on?", "Kana"};
+        String[] teine1={"mis see on?", "kaur"};
+        ArrayList<String[]> uus1=new ArrayList<>();
+        uus1.add(uus);
+        uus1.add(teine1);
+        quiz esimen=new quiz("test",uus1,uus1.size());
         esimen.kirjuta();
+        quiz teine=loe("test");
+        teine.valjasta();
     }
 }
