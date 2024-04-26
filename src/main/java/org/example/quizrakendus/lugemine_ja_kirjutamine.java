@@ -26,19 +26,19 @@ public class lugemine_ja_kirjutamine {
              BufferedReader puhverdatud = new BufferedReader(tekst)) {
             String rida = puhverdatud.readLine();
             while (rida != null) {
-                projektid.add(rida);
                 rida = puhverdatud.readLine(); // loeb järgmise rea. kui ei saa, tagastab nulli
+                projektid.add(rida);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return projektid;
     }
-    public static void kirjutaUle(String[] projektid){
+    public static void kirjutaprojektid(ArrayList<quiz> projektid){
         try (
-                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("Projektid.txt",Charset.defaultCharset()))) {
-            for(int i=0;i<projektid.length;i++){
-            puhverdatud.write(projektid[i]);}
+                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt",Charset.defaultCharset()))) {
+            for(int i=0;i<projektid.size();i++){
+            puhverdatud.write(projektid.get(i).getNimi());}
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
             throw new RuntimeException(e);
@@ -46,8 +46,7 @@ public class lugemine_ja_kirjutamine {
     }
     public static void lisaprojektid(String projekt){
         try (
-                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("Projektid.txt", Charset.defaultCharset(), true))) {
-
+                BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("sisend.txt", Charset.defaultCharset(), true))) {
                 puhverdatud.write(projekt);
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
@@ -55,14 +54,7 @@ public class lugemine_ja_kirjutamine {
         }
     }
     public static void main(String[] args) throws IOException {
-        String[] uus={"mis see on?", "Kana"};
-        String[] teine1={"mis see on?", "kaur"};
-        ArrayList<String[]> uus1=new ArrayList<>();
-        uus1.add(uus);
-        uus1.add(teine1);
-        quiz esimen=new quiz("test",uus1,uus1.size());
+        quiz esimen=new quiz("test",new ArrayList<>(),0);
         esimen.kirjuta();
-        quiz teine=loe("test");
-        teine.valjasta();
     }
 }
