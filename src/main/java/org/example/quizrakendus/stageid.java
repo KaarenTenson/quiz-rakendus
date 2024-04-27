@@ -13,6 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -47,7 +48,13 @@ public class stageid {
         EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
-
+                Avaleht uus=new Avaleht();
+                try {
+                    uus.start(stage);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                //stage.setScene(Avaleht.avaleht);
             }
         };
         nupp.setOnAction(event2);
