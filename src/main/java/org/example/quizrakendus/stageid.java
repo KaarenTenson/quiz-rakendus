@@ -40,16 +40,19 @@ public class stageid {
         return scene;
     }
     public static Scene lisaflash(String nimi, Stage stage){
+        quiz uusquiz=new quiz(nimi,new ArrayList<>(),0);
         GridPane juur=new GridPane();
         TextField kusimus = new TextField();
         TextField vastus= new TextField();
         Button nupp=new Button("Salvesta");
-        Label label = new Label("Sisesta projekti oiasjdkojsad");
+        Button nuppjargmine=new Button("jargmine");
+        Label label = new Label("Sisesta flashkaar");
         EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
                 Avaleht uus=new Avaleht();
                 try {
+                    uusquiz.kirjuta();
                     uus.start(stage);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -57,10 +60,22 @@ public class stageid {
                 //stage.setScene(Avaleht.avaleht);
             }
         };
+        EventHandler<ActionEvent> event3 = new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e)
+            {
+                    uusquiz.lisa(new String[]{kusimus.getText(),vastus.getText()});
+                    kusimus.setText("");
+                    vastus.setText("");
+                //stage.setScene(Avaleht.avaleht);
+            }
+        };
         nupp.setOnAction(event2);
+        nuppjargmine.setOnAction(event3);
         juur.add(kusimus,1,0);
+        juur.add(vastus,2,0);
         juur.add(label,1,1);
         juur.add(nupp,1,2);
+        juur.add(nuppjargmine,2,2);
         Scene scene = new Scene(juur, 700, 700);
         return scene;
     }
