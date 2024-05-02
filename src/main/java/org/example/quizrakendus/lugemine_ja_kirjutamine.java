@@ -55,14 +55,7 @@ public class lugemine_ja_kirjutamine {
         }
     }
     public static void main(String[] args) throws IOException {
-        String[] uus={"mis see on?", "Kana"};
-        String[] teine1={"mis see on?", "kaur"};
-        ArrayList<String[]> uus1=new ArrayList<>();
-        uus1.add(uus);
-        uus1.add(teine1);
-        quiz esimen=new quiz("test",uus1,uus1.size());
-        esimen.kirjuta();
-        quiz teine=loe("test");
+        quiz teine=loe("projekt2");
         teine.valjasta();
     }
 }
