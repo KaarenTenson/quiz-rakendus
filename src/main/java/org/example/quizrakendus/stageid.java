@@ -41,6 +41,7 @@ public class stageid {
     }
     public static Scene lisaflash(String nimi, Stage stage){
         quiz uusquiz=new quiz(nimi,new ArrayList<>(),0);
+        final int[] indeks = {0};
         GridPane juur=new GridPane();
         TextField kusimus = new TextField();
         TextField vastus= new TextField();
@@ -63,6 +64,12 @@ public class stageid {
         EventHandler<ActionEvent> event3 = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
+                    indeks[0] +=1;
+                    if(indeks[0] <uusquiz.getFlashcards().size()){
+                        kusimus.setText(uusquiz.getFlashcards().get(indeks[0])[0]);
+                        vastus.setText(uusquiz.getFlashcards().get(indeks[0])[1]);
+
+                    }
                     uusquiz.lisa(new String[]{kusimus.getText(),vastus.getText()});
                     kusimus.setText("");
                     vastus.setText("");
