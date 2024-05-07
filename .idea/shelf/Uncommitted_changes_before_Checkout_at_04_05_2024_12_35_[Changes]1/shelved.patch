@@ -1,0 +1,72 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397\" name=\"Changes\" comment=\"failist lugemine enamvähem valmis\">\r\n      <change afterPath=\"$PROJECT_DIR$/Projektid.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/HelloApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/HelloApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/lugemine_ja_kirjutamine.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/lugemine_ja_kirjutamine.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/quiz.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/quizrakendus/quiz.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fECCIzLMR4aj1By5y9nWLHtgOX\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.quiz-rakendus [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.quiz-rakendus [:lugemine_ja_kirjutamine.main()].executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397\" name=\"Changes\" comment=\"\" />\r\n      <created>1713356723177</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1713356723177</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"tegin repo\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713357711801</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1713357711801</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00002\" summary=\"tegin repo\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713357724876</created>\r\n      <option name=\"number\" value=\"LOCAL−00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00002\" />\r\n      <updated>1713357724876</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00003\" summary=\"tegin repo\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713527109222</created>\r\n      <option name=\"number\" value=\"LOCAL−00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00003\" />\r\n      <updated>1713527109222</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00004\" summary=\"failist lugemine enamvähem valmis\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713544954400</created>\r\n      <option name=\"number\" value=\"LOCAL−00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00004\" />\r\n      <updated>1713544954400</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00005\" summary=\"failist lugemine enamvähem valmis\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713546536261</created>\r\n      <option name=\"number\" value=\"LOCAL−00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00005\" />\r\n      <updated>1713546536261</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"tegin repo\" />\r\n    <MESSAGE value=\"failist lugemine enamvähem valmis\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"failist lugemine enamvähem valmis\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2a7d5aa07d2cb55d4215057423925c156c4c5e54)
++++ b/.idea/workspace.xml	(date 1714815326963)
+@@ -4,14 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis">
+-      <change afterPath="$PROJECT_DIR$/Projektid.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/HelloApplication.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/lugemine_ja_kirjutamine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/lugemine_ja_kirjutamine.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/quiz.java" afterDir="false" />
+-    </list>
++    <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="Parandasin buge" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -44,12 +37,13 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
++    &quot;Gradle.quiz-rakendus [:Avaleht.main()].executor&quot;: &quot;Run&quot;,
+     &quot;Gradle.quiz-rakendus [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
+     &quot;Gradle.quiz-rakendus [:lugemine_ja_kirjutamine.main()].executor&quot;: &quot;Run&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;oskar&quot;,
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+   }
+@@ -105,12 +99,27 @@
+       <option name="presentableId" value="LOCAL−00005" />
+       <updated>1713546536261</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL−00006" summary="Parandasin buge">
++      <option name="closed" value="true" />
++      <created>1714253420300</created>
++      <option name="number" value="LOCAL−00006" />
++      <option name="presentableId" value="LOCAL−00006" />
++      <updated>1714253420300</updated>
++    </task>
++    <task id="LOCAL−00007" summary="Parandasin buge">
++      <option name="closed" value="true" />
++      <created>1714665482090</created>
++      <option name="number" value="LOCAL−00007" />
++      <option name="presentableId" value="LOCAL−00007" />
++      <updated>1714665482090</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="tegin repo" />
+     <MESSAGE value="failist lugemine enamvähem valmis" />
+-    <option name="LAST_COMMIT_MESSAGE" value="failist lugemine enamvähem valmis" />
++    <MESSAGE value="Parandasin buge" />
++    <option name="LAST_COMMIT_MESSAGE" value="Parandasin buge" />
+   </component>
+ </project>
+\ No newline at end of file
