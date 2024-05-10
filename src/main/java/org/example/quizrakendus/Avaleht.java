@@ -36,6 +36,13 @@ public class Avaleht extends Application {
             HBox topContainer = new HBox();
             topContainer.setPadding(new Insets(20));
 
+            EventHandler<ActionEvent> kasutusjuhendiKuvamine = new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent e)
+                {
+                    stage.setScene(Kasutusjuhend.sisestaprojekt(stage));
+                }
+            };
+
             Button ringiKujulineNupp = new Button("?");
 
             Circle circle = new Circle();
@@ -48,6 +55,7 @@ public class Avaleht extends Application {
 
             ringiKujulineNupp.setMinSize(50, 50);
             ringiKujulineNupp.setMaxSize(50, 50);
+            ringiKujulineNupp.setOnAction(kasutusjuhendiKuvamine);
 
             EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
