@@ -35,7 +35,7 @@ public class Avaleht extends Application {
 
 
             BorderPane ülemine = new BorderPane();
-            ülemine.setPadding(new Insets(20));
+            ülemine.setPadding(new Insets(0,20,0,120));
 
 
             //loadRobotoFont();
@@ -84,16 +84,14 @@ public class Avaleht extends Application {
             Label label = new Label("QUIZLET");
             label.setStyle("-fx-font-size: 40px;");
             ülemine.setMinWidth(700);
-            ülemine.setMaxWidth(700);
+            //ülemine.setMaxWidth(700);
             ülemine.setCenter(label);
-            label.setLayoutX(label.getLayoutX() + 200);
+
 
             nupudÜleval.getChildren().addAll(ringiKujulineNupp, ülemineParemNupp);
             nupudÜleval.setMinWidth(20);
             //nupudÜleval.setAlignment(Pos.CENTER_RIGHT);
             ülemine.setRight(nupudÜleval);
-
-            root.setTop(ülemine);
 
             List<String> projektid = lugemine_ja_kirjutamine.leiaprojektid();
 
@@ -120,6 +118,7 @@ public class Avaleht extends Application {
             scrollPane.setFitToHeight(true);
 
             root.setCenter(scrollPane);
+            root.setTop(ülemine);
 
             root.setMinSize(700, 700);
 
