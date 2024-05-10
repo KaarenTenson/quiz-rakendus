@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projektid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projektid.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" afterDir="false" />
     </list>
@@ -96,7 +95,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1713544954400</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="failist lugemine enamvähem valmis">
+      <option name="closed" value="true" />
+      <created>1715343384552</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1715343384552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

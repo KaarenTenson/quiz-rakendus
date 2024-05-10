@@ -35,12 +35,7 @@ public class stageid {
         return scene;
     }
     public static Scene lisaflash(String nimi, Stage stage){
-        quiz uusquiz;
-        try {
-           uusquiz=lugemine_ja_kirjutamine.loe(nimi);
-        }catch (IOException e){
-            uusquiz=new quiz(nimi,new ArrayList<>(),0);
-        }
+
         final int[] indeks = {0}; //näitab mitmes flashcard see on
         GridPane juur=new GridPane();
         TextField kusimus = new TextField();
@@ -51,6 +46,14 @@ public class stageid {
         Label label = new Label("Sisesta flashkaar");
         Label label1=new Label("1");
         nuppeelmine.setDisable(true);
+        quiz uusquiz;
+        try {
+            uusquiz=lugemine_ja_kirjutamine.loe(nimi);
+            kusimus.setText(uusquiz.getFlashcards().get(0)[0]);
+            vastus.setText(uusquiz.getFlashcards().get(0)[1]);
+        }catch (Exception e){
+            uusquiz=new quiz(nimi,new ArrayList<>(),0);
+        }
         quiz finalUusquiz = uusquiz;
         EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
