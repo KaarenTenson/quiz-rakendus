@@ -31,11 +31,18 @@ public class Avaleht extends Application {
     public void start(Stage stage) throws IOException {
         try {
             BorderPane root = new BorderPane();
+            root.setPadding(new Insets(20));
+
+
+            BorderPane ülemine = new BorderPane();
+            ülemine.setPadding(new Insets(20));
+
 
             //loadRobotoFont();
 
-            HBox topContainer = new HBox();
-            topContainer.setPadding(new Insets(20));
+            HBox nupudÜleval = new HBox();
+            nupudÜleval.setPadding(new Insets(10));
+
 
             EventHandler<ActionEvent> kasutusjuhendiKuvamine = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
@@ -71,14 +78,22 @@ public class Avaleht extends Application {
 
             ülemineParemNupp.setOnAction(event);
 
+            nupudÜleval.setSpacing(10);
 
-            topContainer.setSpacing(10);
 
-            topContainer.getChildren().addAll(ringiKujulineNupp, ülemineParemNupp);
+            Label label = new Label("QUIZLET");
+            label.setStyle("-fx-font-size: 40px;");
+            ülemine.setMinWidth(700);
+            ülemine.setMaxWidth(700);
+            ülemine.setCenter(label);
+            label.setLayoutX(label.getLayoutX() + 200);
 
-            topContainer.setAlignment(Pos.TOP_RIGHT);
+            nupudÜleval.getChildren().addAll(ringiKujulineNupp, ülemineParemNupp);
+            nupudÜleval.setMinWidth(20);
+            //nupudÜleval.setAlignment(Pos.CENTER_RIGHT);
+            ülemine.setRight(nupudÜleval);
 
-            root.setTop(topContainer);
+            root.setTop(ülemine);
 
             List<String> projektid = lugemine_ja_kirjutamine.leiaprojektid();
 
@@ -86,13 +101,9 @@ public class Avaleht extends Application {
 
             VBox vBox = new VBox();
 
-            Label label = new Label("QUIZLET");
-
-            label.setStyle("-fx-font-size: 40px;");
 
             //label.setStyle("-fx-font-family: 'Roboto';");
 
-            vBox.getChildren().add(label);
 
 
             for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud
@@ -109,6 +120,8 @@ public class Avaleht extends Application {
             scrollPane.setFitToHeight(true);
 
             root.setCenter(scrollPane);
+
+            root.setMinSize(700, 700);
 
             avaleht = new Scene(root, 700, 700);
             stage.setScene(avaleht);

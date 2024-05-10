@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis">
       <change beforePath="$PROJECT_DIR$/Projektid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projektid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Avaleht.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Avaleht.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
