@@ -41,7 +41,7 @@ public class stageid {
     }
     public static Scene lisaflash(String nimi, Stage stage){
         quiz uusquiz=new quiz(nimi,new ArrayList<>(),0);
-        final int[] indeks = {0};
+        final int[] indeks = {0}; //näitab mitmes flashcard see on
         GridPane juur=new GridPane();
         TextField kusimus = new TextField();
         TextField vastus= new TextField();

@@ -1,15 +1,16 @@
 package org.example.quizrakendus;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -83,7 +84,7 @@ public class Avaleht extends Application {
 
             System.out.println(projektid);
 
-            VBox centerContainer = new VBox();
+            VBox vBox = new VBox();
 
             Label label = new Label("QUIZLET");
 
@@ -91,23 +92,27 @@ public class Avaleht extends Application {
 
             //label.setStyle("-fx-font-family: 'Roboto';");
 
-            centerContainer.getChildren().add(label);
+            vBox.getChildren().add(label);
 
 
             for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud
                 Button nupp = createButton(projektid.get(i));
-                centerContainer.getChildren().add(nupp);
+                vBox.getChildren().add(nupp);
             }
 
-            centerContainer.setAlignment(javafx.geometry.Pos.CENTER);
-            centerContainer.setSpacing(10);
+            vBox.setAlignment(javafx.geometry.Pos.CENTER);
+            vBox.setSpacing(10);
 
-            root.setCenter(centerContainer);
+            ScrollPane scrollPane = new ScrollPane();
+            scrollPane.setContent(vBox);
+            scrollPane.setFitToWidth(true);
+            scrollPane.setFitToHeight(true);
+
+            root.setCenter(scrollPane);
 
             avaleht = new Scene(root, 700, 700);
             stage.setScene(avaleht);
             stage.setTitle("Quizlet");
-            stage.setResizable(false);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
