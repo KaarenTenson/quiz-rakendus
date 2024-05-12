@@ -44,6 +44,7 @@ public class Avaleht extends Application {
             nupudÜleval.setPadding(new Insets(10));
 
 
+
             EventHandler<ActionEvent> kasutusjuhendiKuvamine = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
                 {
@@ -105,8 +106,17 @@ public class Avaleht extends Application {
 
 
             for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud
+                BorderPane nuppud=new BorderPane();
                 Button nupp = createButton(projektid.get(i));
-                vBox.getChildren().add(nupp);
+
+                Button nupp2 = new Button("muuda");
+                nupp2.setMinWidth(70);
+                nupp2.setMinHeight(70);
+                nupp2.setOnAction(MuudaEvent(projektid.get(i),stage));
+
+                nuppud.setLeft(nupp);
+                nuppud.setRight(nupp2);
+                vBox.getChildren().add(nuppud);
             }
 
             vBox.setAlignment(javafx.geometry.Pos.CENTER);
@@ -131,6 +141,14 @@ public class Avaleht extends Application {
         }
 
     }
+    private static EventHandler<ActionEvent> MuudaEvent(String nimi, Stage stage){
+    EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            stage.setScene(stageid.lisaflash(nimi,stage));
+        }
+    };
+    return event1;}
     private Button createButton(String text) {
         Button button = new Button(text);
         button.setMinWidth(400);
