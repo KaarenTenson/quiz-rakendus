@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="Parandasin buge">
+    <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Avaleht.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Avaleht.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +26,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -102,32 +97,24 @@
     </task>
     <task id="LOCAL−00005" summary="failist lugemine enamvähem valmis">
       <option name="closed" value="true" />
-      <created>1713546536261</created>
+      <created>1715343384552</created>
       <option name="number" value="LOCAL−00005" />
       <option name="presentableId" value="LOCAL−00005" />
-      <updated>1713546536261</updated>
+      <updated>1715343384552</updated>
     </task>
-    <task id="LOCAL−00006" summary="Parandasin buge">
+    <task id="LOCAL−00006" summary="failist lugemine enamvähem valmis">
       <option name="closed" value="true" />
-      <created>1714253420300</created>
+      <created>1715348784454</created>
       <option name="number" value="LOCAL−00006" />
       <option name="presentableId" value="LOCAL−00006" />
-      <updated>1714253420300</updated>
+      <updated>1715348784454</updated>
     </task>
-    <task id="LOCAL−00007" summary="Parandasin buge">
-      <option name="closed" value="true" />
-      <created>1714665482090</created>
-      <option name="number" value="LOCAL−00007" />
-      <option name="presentableId" value="LOCAL−00007" />
-      <updated>1714665482090</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tegin repo" />
     <MESSAGE value="failist lugemine enamvähem valmis" />
-    <MESSAGE value="Parandasin buge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parandasin buge" />
+    <option name="LAST_COMMIT_MESSAGE" value="failist lugemine enamvähem valmis" />
   </component>
 </project>

@@ -1,15 +1,16 @@
 package org.example.quizrakendus;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -30,11 +31,26 @@ public class Avaleht extends Application {
     public void start(Stage stage) throws IOException {
         try {
             BorderPane root = new BorderPane();
+            root.setPadding(new Insets(20));
+
+
+            BorderPane ülemine = new BorderPane();
+            ülemine.setPadding(new Insets(0,20,0,120));
+
 
             //loadRobotoFont();
 
-            HBox topContainer = new HBox();
-            topContainer.setPadding(new Insets(20));
+            HBox nupudÜleval = new HBox();
+            nupudÜleval.setPadding(new Insets(10));
+
+
+
+            EventHandler<ActionEvent> kasutusjuhendiKuvamine = new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent e)
+                {
+                    stage.setScene(Kasutusjuhend.sisestaprojekt(stage));
+                }
+            };
 
             Button ringiKujulineNupp = new Button("?");
 
@@ -48,6 +64,7 @@ public class Avaleht extends Application {
 
             ringiKujulineNupp.setMinSize(50, 50);
             ringiKujulineNupp.setMaxSize(50, 50);
+            ringiKujulineNupp.setOnAction(kasutusjuhendiKuvamine);
 
             EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
@@ -62,50 +79,76 @@ public class Avaleht extends Application {
 
             ülemineParemNupp.setOnAction(event);
 
+            nupudÜleval.setSpacing(10);
 
-            topContainer.setSpacing(10);
 
-            topContainer.getChildren().addAll(ringiKujulineNupp, ülemineParemNupp);
+            Label label = new Label("QUIZLET");
+            label.setStyle("-fx-font-size: 40px;");
+            ülemine.setMinWidth(700);
+            //ülemine.setMaxWidth(700);
+            ülemine.setCenter(label);
 
-            topContainer.setAlignment(Pos.TOP_RIGHT);
 
-            root.setTop(topContainer);
+            nupudÜleval.getChildren().addAll(ringiKujulineNupp, ülemineParemNupp);
+            nupudÜleval.setMinWidth(20);
+            //nupudÜleval.setAlignment(Pos.CENTER_RIGHT);
+            ülemine.setRight(nupudÜleval);
 
             List<String> projektid = lugemine_ja_kirjutamine.leiaprojektid();
 
             System.out.println(projektid);
 
-            VBox centerContainer = new VBox();
+            VBox vBox = new VBox();
 
-            Label label = new Label("QUIZLET");
-
-            label.setStyle("-fx-font-size: 40px;");
 
             //label.setStyle("-fx-font-family: 'Roboto';");
 
-            centerContainer.getChildren().add(label);
 
 
             for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud
+                BorderPane nuppud=new BorderPane();
                 Button nupp = createButton(projektid.get(i));
-                centerContainer.getChildren().add(nupp);
+
+                Button nupp2 = new Button("muuda");
+                nupp2.setMinWidth(70);
+                nupp2.setMinHeight(70);
+                nupp2.setOnAction(MuudaEvent(projektid.get(i),stage));
+
+                nuppud.setLeft(nupp);
+                nuppud.setRight(nupp2);
+                vBox.getChildren().add(nuppud);
             }
 
-            centerContainer.setAlignment(javafx.geometry.Pos.CENTER);
-            centerContainer.setSpacing(10);
+            vBox.setAlignment(javafx.geometry.Pos.CENTER);
+            vBox.setSpacing(10);
 
-            root.setCenter(centerContainer);
+            ScrollPane scrollPane = new ScrollPane();
+            scrollPane.setContent(vBox);
+            scrollPane.setFitToWidth(true);
+            scrollPane.setFitToHeight(true);
+
+            root.setCenter(scrollPane);
+            root.setTop(ülemine);
+
+            root.setMinSize(700, 700);
 
             avaleht = new Scene(root, 700, 700);
             stage.setScene(avaleht);
             stage.setTitle("Quizlet");
-            stage.setResizable(false);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
+    private static EventHandler<ActionEvent> MuudaEvent(String nimi, Stage stage){
+    EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            stage.setScene(stageid.lisaflash(nimi,stage));
+        }
+    };
+    return event1;}
     private Button createButton(String text) {
         Button button = new Button(text);
         button.setMinWidth(400);
