@@ -108,6 +108,7 @@ public class Avaleht extends Application {
             for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud
                 BorderPane nuppud=new BorderPane();
                 Button nupp = createButton(projektid.get(i));
+                nupp.setOnAction(MangiEvent(projektid.get(i),stage));
 
                 Button nupp2 = new Button("muuda");
                 nupp2.setMinWidth(70);
@@ -143,12 +144,24 @@ public class Avaleht extends Application {
     }
     private static EventHandler<ActionEvent> MuudaEvent(String nimi, Stage stage){
     EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
-        public void handle(ActionEvent e)
-        {
-            stage.setScene(stageid.lisaflash(nimi,stage));
+        public void handle(ActionEvent e) {
+            stage.setScene(stageid.lisaflash(nimi, stage));
         }
     };
-    return event1;}
+    return event1;
+    }
+        private static EventHandler<ActionEvent> MangiEvent(String nimi, Stage stage){
+            EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent e)
+                {
+                    try {
+                        programm.flash(stage,nimi);
+                    } catch (Exception ex) {
+                        throw new RuntimeException(ex);
+                    };
+                }
+            };
+        return event2;}
     private Button createButton(String text) {
         Button button = new Button(text);
         button.setMinWidth(400);

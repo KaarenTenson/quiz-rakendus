@@ -23,32 +23,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class programm extends Application {
-    @Override
-    public void start(Stage stage) throws Exception {
+public class programm  {
+
+    public static void flash(Stage stage, String projekt1) throws Exception {
         // testimiseks fail
-        List<String[]> flashid = new ArrayList<>();
-        flashid.add(new String[]{"oo", "aa"});
-        flashid.add(new String[]{"laheküsimus", "ägevastus"});
-        quiz test = new quiz("test", flashid, 2);
-        test.kirjuta();
+
+
+        quiz projekt = lugemine_ja_kirjutamine.loe(projekt1);
+        List<String[]> flashid = projekt.getFlashcards();
+        List<Scene> stseenid = kuju(projekt, stage);
+        stseenid.add(lõpp(stage, stseenid));
+        System.out.println(stseenid);
+        stage.setScene(stseenid.get(0));
+        stage.show();
+
 
         // lugemine
-        try {
-            quiz projekt = lugemine_ja_kirjutamine.loe(test.getNimi());
-            List<Scene> stseenid = kuju(projekt, stage);
-            stseenid.add(lõpp(stage, stseenid));
-            System.out.println(stseenid);
-            stage.setScene(stseenid.get(0));
-            stage.show();
-        } catch (FileNotFoundException e) {
-            System.out.println("ei leidnud :(");
-        }
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
 
     public static List<Scene> kuju(quiz projekt, Stage stage) {
 
@@ -181,7 +173,7 @@ public class programm extends Application {
         scaleBack.play();
     }
 
-    private Scene lõpp(Stage stage, List<Scene> stseenid) {
+    private static Scene lõpp(Stage stage, List<Scene> stseenid) {
         // tekst
         Label l = new Label("Olete jõudnud küsimuste lõppu.\n");
         l.setAlignment(Pos.CENTER);
