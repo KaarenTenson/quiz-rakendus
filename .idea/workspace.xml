@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projektid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projektid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projektid.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/programm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/programm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
     </list>
@@ -100,7 +100,7 @@
       <updated>1713356723177</updated>
       <workItem from="1715538334454" duration="1664000" />
       <workItem from="1715634498243" duration="13708000" />
-      <workItem from="1715771900171" duration="2621000" />
+      <workItem from="1715771900171" duration="7849000" />
     </task>
     <task id="LOCAL−00001" summary="tegin repo">
       <option name="closed" value="true" />
