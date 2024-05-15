@@ -26,19 +26,15 @@ import java.util.List;
 public class programm  {
 
     public static void flash(Stage stage, String projekt1) throws Exception {
-        // testimiseks fail
-
-
+        // lugemine
         quiz projekt = lugemine_ja_kirjutamine.loe(projekt1);
         List<String[]> flashid = projekt.getFlashcards();
         List<Scene> stseenid = kuju(projekt, stage);
         stseenid.add(lõpp(stage, stseenid));
         System.out.println(stseenid);
+        stage.setTitle(projekt1);
         stage.setScene(stseenid.get(0));
         stage.show();
-
-
-        // lugemine
     }
 
 
@@ -181,19 +177,22 @@ public class programm  {
         l.setTextFill(Color.rgb(92, 185, 206));
 
         // avaleht ja tagasi nupud
-        Button avaleht = new Button("Avaleht");
-        avaleht.setStyle("-fx-background-color: #5cb9ce");
         Button tagasi = new Button("Tagasi");
         tagasi.setStyle("-fx-background-color: #5cb9ce");
+        Button avaleht = new Button("Avaleht");
+        avaleht.setStyle("-fx-background-color: #5cb9ce");
 
         // paigutus
         GridPane g = new GridPane();
         g.setAlignment(Pos.CENTER);
-        g.getChildren().addAll(l, tagasi, avaleht);
+        if (stseenid.size() >= 1) g.getChildren().addAll(l, tagasi, avaleht); //kui vähemalt 1 päris stseen
+        else g.getChildren().addAll(l, avaleht);
         VBox v = new VBox(g);
         v.setAlignment(Pos.CENTER);
         v.setSpacing(10);
-        HBox h = new HBox(tagasi, avaleht); // edasi ja tagasi nuppude paigutus
+        HBox h = new HBox(); // edasi ja tagasi nuppude paigutus
+        if (stseenid.size() >= 1) h.getChildren().addAll(tagasi, avaleht); //kui vähemalt 1 päris stseen
+        else h.getChildren().addAll(avaleht);
         h.setAlignment(Pos.CENTER);
         h.setSpacing(155);
         h.setPadding(new Insets(10, 9, 20, 10));
