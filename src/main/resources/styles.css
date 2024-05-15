@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: url('fonts/OpenSans-Regular.ttf');
+    font-family: 'Freeman';
+    src: url('fonts/Freeman-Regular.ttf');
 }
 
 .root-pane {
-    -fx-font-family: 'Open Sans';
+    -fx-font-family: 'Freeman';
     -fx-background-color: #2d2b2b;
 }
 
@@ -15,7 +15,7 @@
 .button-default {
     -fx-background-color: #5cb9ce;
     -fx-text-fill: #2E2E2E;
-    -fx-font-family: 'Open Sans';
+    -fx-font-family: 'Freeman';
     -fx-border-radius: 5px;
     -fx-padding: 10 20;
     -fx-transition: all 0.3s ease;
@@ -30,13 +30,13 @@
 .label-title {
     -fx-text-fill: #5cb9ce;
     -fx-font-size: 90px;
-    -fx-font-family: 'Open Sans';
+    -fx-font-family: 'Freeman';
 }
 
 .label {
     -fx-text-fill: #5cb9ce;
     -fx-font-size: 15px;
-    -fx-font-family: 'Open Sans';
+    -fx-font-family: 'Freeman';
 }
 
 .label.label-title {
