@@ -2,11 +2,17 @@ package org.example.quizrakendus;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,11 +24,14 @@ public class stageid {
     public static Scene sisestaprojekt(Stage stage){
         GridPane juur=new GridPane();
         juur.getStyleClass().add("vbox-default");
+        juur.setVgap(10);
         TextField nimi = new TextField();
         Button nupp=new Button("Salvesta");
         Label label = new Label("Sisesta projekt");
         nupp.getStyleClass().add("button-default");
         label.getStyleClass().add("label");
+        juur.setHalignment(label, HPos.CENTER);
+        juur.setHalignment(nupp, HPos.CENTER);
 
 
         EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
@@ -36,10 +45,11 @@ public class stageid {
             }
         };
         nupp.setOnAction(event2);
-        juur.add(nimi,1,0);
-        juur.add(label,1,1);
-        juur.add(nupp,1,2);
-        Scene scene = new Scene(juur, 700, 700);
+        juur.add(label,0,0);
+        juur.add(nimi,0,1);
+        juur.add(nupp,0,2);
+        juur.setAlignment(Pos.CENTER);
+        Scene scene = new Scene(juur, 500, 300);
 
         String css = Kasutusjuhend.class.getResource("/styles.css").toExternalForm();
         scene.getStylesheets().add(css);
@@ -51,23 +61,28 @@ public class stageid {
         final int[] indeks = {0}; //näitab mitmes flashcard see on
         GridPane juur=new GridPane();
         juur.getStyleClass().add("vbox-default");
+        juur.setVgap(10);
+        juur.setHgap(10);
+        juur.setAlignment(Pos.CENTER);
+        juur.setPadding(new Insets(20));
+
         TextField kusimus = new TextField();
         TextField vastus= new TextField();
-        //kusimus.getStyleClass().add("label");
-        //vastus.getStyleClass().add("label");
-        Button nupp=new Button("Salvesta");
+        Button nupp=new Button("salvesta");
         Button nuppjargmine=new Button("järgmine");
         Button nuppeelmine=new Button("eelmine");
-        Button nuppkustuta=new Button("kustuta");
+        Button nuppkustuta=new Button("kustuta projekt");
+        kusimus.getStyleClass().add("text-field");
+        vastus.getStyleClass().add("text-field");
         nupp.getStyleClass().add("button-default");
         nuppeelmine.getStyleClass().add("button-default");
         nuppjargmine.getStyleClass().add("button-default");
+        nuppkustuta.getStyleClass().add("button-default");
 
 
-        Label label = new Label("Sisesta flashkaart");
-        Label label1=new Label("1");
-        label.getStyleClass().add("label");
-        label1.getStyleClass().add("label-title");
+
+        Label label1 = new Label("Sisesta 1. küsimus-vastus paar");
+        label1.getStyleClass().add("label");
         nuppeelmine.setDisable(true);
         quiz uusquiz;
         try {
@@ -109,7 +124,7 @@ public class stageid {
                     kusimus.setText("");
                     vastus.setText("");}
                 indeks[0] +=1;}
-                label1.setText(String.valueOf(indeks[0]+1));
+                label1.setText("Sisesta "+ String.valueOf(indeks[0]+1) + ". küsimus-vastus paar");
 
                 //stage.setScene(Avaleht.avaleht);
             }
@@ -130,7 +145,7 @@ public class stageid {
                     kusimus.setText(finalUusquiz.getFlashcards().get(indeks[0])[0]);
                     vastus.setText(finalUusquiz.getFlashcards().get(indeks[0])[1]);
                 }
-                label1.setText(String.valueOf(indeks[0]+1));
+                label1.setText("Sisesta " + String.valueOf(indeks[0]+1) + ". küsimus-vastus paar");
 
 
                 //stage.setScene(Avaleht.avaleht);
@@ -155,15 +170,21 @@ public class stageid {
         nuppjargmine.setOnAction(event3);
         nuppeelmine.setOnAction(event4);
         nuppkustuta.setOnAction(eventKustuta);
-        juur.add(kusimus,1,0);
-        juur.add(vastus,2,0);
-        juur.add(label,1,1);
-        juur.add(nupp,1,2);
-        juur.add(nuppjargmine,2,2);
-        juur.add(nuppeelmine,3,2);
-        juur.add(nuppkustuta,4,2);
-        juur.add(label1,0,0);
-        Scene scene = new Scene(juur, 700, 700);
+        juur.setHalignment(label1, HPos.CENTER);
+
+        juur.add(kusimus,0,1);
+        juur.add(vastus,1,1);
+        juur.add(label1,0, 0, 2,1);
+        juur.add(nupp,0,2);
+        juur.setAlignment(Pos.CENTER);
+
+        HBox nupud = new HBox(10);
+        HBox.setMargin(nuppkustuta, new Insets(0, 0, 0, 50));
+        HBox.setMargin(nuppeelmine, new Insets(0, 0, 0, 105));
+        nupud.getChildren().addAll(nupp, nuppeelmine, nuppjargmine, nuppkustuta);
+        juur.add(nupud, 0, 2, 2, 1);
+
+        Scene scene = new Scene(juur, 650, 300);
 
         String css = Kasutusjuhend.class.getResource("/styles.css").toExternalForm();
         scene.getStylesheets().add(css);
