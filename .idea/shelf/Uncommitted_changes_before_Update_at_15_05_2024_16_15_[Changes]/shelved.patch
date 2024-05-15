@@ -1,0 +1,15 @@
+Index: Projektid.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>tere\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n3132\r\n\r\n\r\n\r\n213123\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Projektid.txt b/Projektid.txt
+--- a/Projektid.txt	(revision 84e4a1de5eaedaffd186c6fa6e5a7331dbb15135)
++++ b/Projektid.txt	(date 1715778937911)
+@@ -18,3 +18,4 @@
+ 
+ 213123
+ 
++
