@@ -28,7 +28,9 @@ public class stageid {
             public void handle(ActionEvent e)
             {
                 label.setText("salvestatud");
-                lugemine_ja_kirjutamine.lisaprojektid(nimi.getText());
+                String d=nimi.getText();
+                if(!lugemine_ja_kirjutamine.leiaprojektid().contains(d)){
+                    lugemine_ja_kirjutamine.lisaprojektid(nimi.getText());}
                 stage.setScene(lisaflash(nimi.getText(),stage));
             }
         };
