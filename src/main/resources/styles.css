@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+
+.root-pane {
+    -fx-font-family: 'Open Sans';
+    -fx-background-color: #2d2b2b;
+}
+
+.circle {
+    -fx-fill: #3377FF;
+}
+
+.button-default {
+    -fx-background-color: #5cb9ce;
+    -fx-text-fill: #2E2E2E;
+    -fx-font-family: 'Open Sans';
+    -fx-border-radius: 5px;
+    -fx-padding: 10 20;
+    -fx-transition: all 0.3s ease;
+}
+
+.button-default:hover {
+    -fx-background-color: #6699FF;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.label-title {
+    -fx-text-fill: #5cb9ce;
+    -fx-font-size: 90px;
+    -fx-font-family: 'Open Sans';
+}
+
+.label {
+    -fx-text-fill: #5cb9ce;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Open Sans';
+}
+
+.label.label-title {
+    -fx-font-size: 90px;
+}
+
+.vbox-default {
+    -fx-background-color: #2d2b2b;
+}
+
+.scroll-pane {
+    -fx-background-color: #2d2b2b;
+}
+
+.scroll-bar {
+    -fx-background-color: #2d2b2b;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #5cb9ce;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #5cb9ce;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #333333;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #5cb9ce;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #ffffff;
+}

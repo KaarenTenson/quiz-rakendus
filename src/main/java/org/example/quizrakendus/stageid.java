@@ -16,9 +16,14 @@ public class stageid {
     public ArrayList<Scene> kohad;
     public static Scene sisestaprojekt(Stage stage){
         GridPane juur=new GridPane();
+        juur.getStyleClass().add("vbox-default");
         TextField nimi = new TextField();
         Button nupp=new Button("Salvesta");
         Label label = new Label("Sisesta projekt");
+        nupp.getStyleClass().add("button-default");
+        label.getStyleClass().add("label");
+
+
         EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
@@ -32,19 +37,33 @@ public class stageid {
         juur.add(label,1,1);
         juur.add(nupp,1,2);
         Scene scene = new Scene(juur, 700, 700);
+
+        String css = Kasutusjuhend.class.getResource("/styles.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
         return scene;
     }
     public static Scene lisaflash(String nimi, Stage stage){
 
         final int[] indeks = {0}; //näitab mitmes flashcard see on
         GridPane juur=new GridPane();
+        juur.getStyleClass().add("vbox-default");
         TextField kusimus = new TextField();
         TextField vastus= new TextField();
+        //kusimus.getStyleClass().add("label");
+        //vastus.getStyleClass().add("label");
         Button nupp=new Button("Salvesta");
         Button nuppjargmine=new Button("järgmine");
         Button nuppeelmine=new Button("eelmine");
-        Label label = new Label("Sisesta flashkaar");
+        nupp.getStyleClass().add("button-default");
+        nuppeelmine.getStyleClass().add("button-default");
+        nuppjargmine.getStyleClass().add("button-default");
+
+
+        Label label = new Label("Sisesta flashkaart");
         Label label1=new Label("1");
+        label.getStyleClass().add("label");
+        label1.getStyleClass().add("label-title");
         nuppeelmine.setDisable(true);
         quiz uusquiz;
         try {
@@ -124,6 +143,10 @@ public class stageid {
         juur.add(nuppeelmine,3,2);
         juur.add(label1,0,0);
         Scene scene = new Scene(juur, 700, 700);
+
+        String css = Kasutusjuhend.class.getResource("/styles.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
         return scene;
     }
 }
