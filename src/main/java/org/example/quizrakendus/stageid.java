@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class stageid {
     public ArrayList<Scene> kohad;
@@ -57,6 +58,7 @@ public class stageid {
         Button nupp=new Button("Salvesta");
         Button nuppjargmine=new Button("järgmine");
         Button nuppeelmine=new Button("eelmine");
+        Button nuppkustuta=new Button("kustuta");
         nupp.getStyleClass().add("button-default");
         nuppeelmine.getStyleClass().add("button-default");
         nuppjargmine.getStyleClass().add("button-default");
@@ -134,15 +136,32 @@ public class stageid {
                 //stage.setScene(Avaleht.avaleht);
             }
         };
+        EventHandler<ActionEvent> eventKustuta = new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e)
+            {
+                Avaleht uus=new Avaleht();
+                try {
+                    List<String> as=lugemine_ja_kirjutamine.leiaprojektid();
+                    as.remove(nimi);
+                    lugemine_ja_kirjutamine.kirjutaUle(as.toArray(new String[0]));
+                    uus.start(stage);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                //stage.setScene(Avaleht.avaleht);
+            }
+        };
         nupp.setOnAction(event2);
         nuppjargmine.setOnAction(event3);
         nuppeelmine.setOnAction(event4);
+        nuppkustuta.setOnAction(eventKustuta);
         juur.add(kusimus,1,0);
         juur.add(vastus,2,0);
         juur.add(label,1,1);
         juur.add(nupp,1,2);
         juur.add(nuppjargmine,2,2);
         juur.add(nuppeelmine,3,2);
+        juur.add(nuppkustuta,4,2);
         juur.add(label1,0,0);
         Scene scene = new Scene(juur, 700, 700);
 

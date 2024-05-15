@@ -38,7 +38,7 @@ public class lugemine_ja_kirjutamine {
         try (
                 BufferedWriter puhverdatud = new BufferedWriter(new FileWriter("Projektid.txt",Charset.defaultCharset()))) {
             for(int i=0;i<projektid.length;i++){
-            puhverdatud.write(projektid[i]);}
+            puhverdatud.write(projektid[i]+"\n");}
             // loeb järgmise rea. kui ei saa, tagastab nulli
         }   catch (IOException e) {
             throw new RuntimeException(e);
