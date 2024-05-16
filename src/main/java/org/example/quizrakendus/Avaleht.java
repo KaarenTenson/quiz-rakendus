@@ -26,17 +26,13 @@ public class Avaleht extends Application {
         try {
             BorderPane root = new BorderPane();
             root.setPadding(new Insets(20));
-            root.getStyleClass().add("root-pane");  // Apply root pane style
+            root.getStyleClass().add("root-pane");
 
             BorderPane ülemine = new BorderPane();
-
             ülemine.setPadding(new Insets(0,20,0,120));
-
 
             HBox nupudÜleval = new HBox();
             nupudÜleval.setPadding(new Insets(10));
-
-
 
             EventHandler<ActionEvent> kasutusjuhendiKuvamine = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
@@ -45,7 +41,7 @@ public class Avaleht extends Application {
                 }
             };
 
-
+            //kasutusjuhendi kuvamise nupp
             Circle circle = new Circle();
             circle.setRadius(25);
             circle.getStyleClass().add("circle");
@@ -60,19 +56,20 @@ public class Avaleht extends Application {
             ringiKujulineNupp.setAlignment(Pos.CENTER);
             ringiKujulineNupp.setOnAction(kasutusjuhendiKuvamine);
 
-            EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+            EventHandler<ActionEvent> projektiLisamine = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
                 {
                     stage.setScene(stageid.sisestaprojekt(stage));
                 }
             };
 
+            //uue projekti lisamise nupp
             Button ülemineParemNupp = new Button("Uus projekt");
             ülemineParemNupp.getStyleClass().add("button-default");
             ülemineParemNupp.setMinWidth(80);
             ülemineParemNupp.setMinHeight(50);
 
-            ülemineParemNupp.setOnAction(event);
+            ülemineParemNupp.setOnAction(projektiLisamine);
 
             nupudÜleval.setSpacing(10);
 
@@ -90,12 +87,10 @@ public class Avaleht extends Application {
 
             List<String> projektid = lugemine_ja_kirjutamine.leiaprojektid();
 
-            System.out.println(projektid);
-
             VBox vBox = new VBox();
             vBox.getStyleClass().add("vbox-default");
 
-            for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud
+            for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud ja muuda nupud
                 BorderPane nupud=new BorderPane();
                 Button nupp = createButton(projektid.get(i));
                 nupp.setOnAction(MangiEvent(projektid.get(i),stage));
@@ -116,6 +111,7 @@ public class Avaleht extends Application {
             vBox.setAlignment(javafx.geometry.Pos.CENTER);
             vBox.setSpacing(10);
 
+            //loon scrolleri
             ScrollPane scrollPane = new ScrollPane();
             scrollPane.setContent(vBox);
             scrollPane.setFitToWidth(true);
@@ -134,6 +130,7 @@ public class Avaleht extends Application {
 
             stage.setTitle("Quizlet");
             stage.setScene(avaleht);
+            stage.setResizable(false);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -160,7 +157,7 @@ public class Avaleht extends Application {
                 }
             };
         return event2;}
-    private Button createButton(String text) {
+    private Button createButton(String text) { //nupu loomise abimeetod
         Button button = new Button(text);
         button.setMinWidth(400);
         button.setMinHeight(70);

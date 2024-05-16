@@ -27,7 +27,7 @@
 
 .button-flash {
     -fx-background-color: #5cb9ce;
-    -fx-text-fill: #2E2E2E;
+    -fx-text-fill: white;
     -fx-font-family: 'Freeman';
     -fx-border-radius: 5px;
     -fx-padding: 10 20;

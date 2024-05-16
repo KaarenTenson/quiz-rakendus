@@ -41,7 +41,7 @@ public class Kasutusjuhend extends Avaleht{
         bp.setPadding(new Insets(10));
         bp.setCenter(vbox);
 
-        EventHandler<ActionEvent> tagasi = new EventHandler<ActionEvent>() {
+        EventHandler<ActionEvent> tagasi = new EventHandler<ActionEvent>() { //tagasi avalehele
             public void handle(ActionEvent e) {
                 stage.setScene(Avaleht.avaleht);
             }
@@ -52,7 +52,7 @@ public class Kasutusjuhend extends Avaleht{
         Scene scene = new Scene(bp, 400, 600);
 
         String css = Kasutusjuhend.class.getResource("/styles.css").toExternalForm();
-        scene.getStylesheets().add(css);
+        scene.getStylesheets().add(css); //rakendame css-i
 
         return scene;
     }
