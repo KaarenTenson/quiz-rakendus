@@ -36,6 +36,8 @@ public class Avaleht extends Application {
             HBox nupudÜleval = new HBox();
             nupudÜleval.setPadding(new Insets(10));
 
+
+
             EventHandler<ActionEvent> kasutusjuhendiKuvamine = new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e)
                 {
@@ -75,16 +77,16 @@ public class Avaleht extends Application {
             nupudÜleval.setSpacing(10);
 
 
+            ülemine.setMinWidth(700);
+            ülemine.setMinHeight(250);
+
             Label label = new Label("QUIZLET");
             label.getStyleClass().add("label-title");
 
-            ülemine.setMinWidth(700);
-            ülemine.setCenter(label);
-
 
             nupudÜleval.getChildren().addAll(ringiKujulineNupp, ülemineParemNupp);
-            nupudÜleval.setMinWidth(20);
             ülemine.setRight(nupudÜleval);
+            ülemine.setCenter(label);
 
             List<String> projektid = lugemine_ja_kirjutamine.leiaprojektid();
 
@@ -105,8 +107,9 @@ public class Avaleht extends Application {
                 nupp2.getStyleClass().add("button-default");
                 nupp2.setOnAction(MuudaEvent(projektid.get(i),stage));
 
-                nupud.setLeft(nupp);
+                nupud.setCenter(nupp);
                 nupud.setRight(nupp2);
+                nupud.setPadding(new Insets(0, 70, 0, 0));
                 vBox.getChildren().add(nupud);
             }
 
@@ -129,8 +132,8 @@ public class Avaleht extends Application {
             String css = getClass().getResource("/styles.css").toExternalForm();
             avaleht.getStylesheets().add(css);
 
-            stage.setScene(avaleht);
             stage.setTitle("Quizlet");
+            stage.setScene(avaleht);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

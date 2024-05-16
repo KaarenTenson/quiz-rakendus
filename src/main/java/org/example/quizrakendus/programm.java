@@ -31,7 +31,6 @@ public class programm  {
         List<String[]> flashid = projekt.getFlashcards();
         List<Scene> stseenid = kuju(projekt, stage);
         stseenid.add(lõpp(stage, stseenid));
-        System.out.println(stseenid);
         stage.setTitle(projekt1);
         stage.setScene(stseenid.get(0));
         stage.show();
@@ -56,29 +55,30 @@ public class programm  {
             vastus.setVisible(false); // vastus pole nähtav
             // küsimuse kohandused
             küsimus.setWrapText(true);
-            küsimus.setMinSize(300, 100); // miinimum ja maksimum suurused
-            küsimus.setMaxSize(300, 100);
-            küsimus.setPrefSize(300, 100);
-            küsimus.setFont(new Font("Arial", 18));
+            küsimus.setMinSize(425, 175); // miinimum ja maksimum suurused
+            küsimus.setMaxSize(425, 175);
+            küsimus.getStyleClass().add("button-flash");
             küsimus.setStyle("-fx-background-color: #5cb9ce");
             // vastuse kohandused
             vastus.setWrapText(true);
-            vastus.setMinSize(300, 100); // miinimum ja maksimum suurused
-            vastus.setMaxSize(300, 100);
-            vastus.setPrefSize(300, 100);
+            vastus.setMinSize(425, 175); // miinimum ja maksimum suurused
+            vastus.setMaxSize(425, 175);
             vastus.setFont(new Font("Arial", 18));
+            vastus.getStyleClass().add("button-flash");
             vastus.setStyle("-fx-background-color: #5cb9ce");
 
             // edasi ja tagasi nupud
             Button edasi = new Button("Edasi");
+            edasi.getStyleClass().add("button-default");
             edasi.setStyle("-fx-background-color: #5cb9ce");
             Button tagasi = new Button("Tagasi");
+            tagasi.getStyleClass().add("button-default");
             tagasi.setStyle("-fx-background-color: #5cb9ce");
             tagasi.setVisible(i > 0); // ei näite tagasi nuppu esimesel stseenil
 
             // paigutamine
             VBox v = paigutamine(küsimus, vastus, edasi, tagasi);
-            Scene s = new Scene(v, 350, 250);
+            Scene s = new Scene(v, 500, 400);
             s.setRoot(v); // root v
             v.setStyle("-fx-background-color: #2d2b2b");
             v.setMinWidth(100);
@@ -90,6 +90,8 @@ public class programm  {
             v.getChildren().add(h);
 
             // lisatakse stseen teiste stseenide hulka
+            String css = programm.class.getResource("/styles.css").toExternalForm();
+            s.getStylesheets().add(css);
             stseenid.add(s);
 
             // kui küsimuse peale vajutada
@@ -173,13 +175,15 @@ public class programm  {
         // tekst
         Label l = new Label("Olete jõudnud küsimuste lõppu.\n");
         l.setAlignment(Pos.CENTER);
-        l.setFont(new Font("Arial", 18));
+        l.setFont(new Font("Arial", 32));
         l.setTextFill(Color.rgb(92, 185, 206));
 
         // avaleht ja tagasi nupud
         Button tagasi = new Button("Tagasi");
+        tagasi.getStyleClass().add("button-default");
         tagasi.setStyle("-fx-background-color: #5cb9ce");
         Button avaleht = new Button("Avaleht");
+        avaleht.getStyleClass().add("button-default");
         avaleht.setStyle("-fx-background-color: #5cb9ce");
 
         // paigutus
@@ -199,7 +203,9 @@ public class programm  {
         v.getChildren().add(h);
 
         // stseen ja nupuvajutused
-        Scene s = new Scene(v, 350, 250);
+        Scene s = new Scene(v, 500, 400);
+        String css = programm.class.getResource("/styles.css").toExternalForm();
+        s.getStylesheets().add(css);
         s.setRoot(v); // root v
         v.setStyle("-fx-background-color: #2d2b2b");
         v.setMinWidth(100);

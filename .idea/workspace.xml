@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis" />
+    <list default="true" id="cc84a3bc-0970-4c8d-9c9e-a2ddd5fbf397" name="Changes" comment="failist lugemine enamvähem valmis">
+      <change beforePath="$PROJECT_DIR$/.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projektid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projektid.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Avaleht.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Avaleht.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Kasutusjuhend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/Kasutusjuhend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/quizrakendus/stageid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +108,7 @@
       <updated>1713356723177</updated>
       <workItem from="1715538334454" duration="1664000" />
       <workItem from="1715634498243" duration="13708000" />
-      <workItem from="1715771900171" duration="2621000" />
+      <workItem from="1715771900171" duration="7849000" />
     </task>
     <task id="LOCAL−00001" summary="tegin repo">
       <option name="closed" value="true" />
@@ -153,6 +161,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tegin repo" />
     <MESSAGE value="failist lugemine enamvähem valmis" />
-    <option name="LAST_COMMIT_MESSAGE" value="failist lugemine enamvähem valmis" />
+    <MESSAGE value="tegin GUI-d ilusamaks ja fixisin mõned kohad ära" />
+    <option name="LAST_COMMIT_MESSAGE" value="tegin GUI-d ilusamaks ja fixisin mõned kohad ära" />
   </component>
 </project>
