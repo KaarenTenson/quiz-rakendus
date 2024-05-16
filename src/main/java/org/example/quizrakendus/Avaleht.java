@@ -92,7 +92,7 @@ public class Avaleht extends Application {
 
             for (int i = 0; i < projektid.size(); i++) { //loob projektide pealkirjadega nupud ja muuda nupud
                 BorderPane nupud=new BorderPane();
-                Button nupp = createButton(projektid.get(i));
+                Button nupp = looNupp(projektid.get(i));
                 nupp.setOnAction(MangiEvent(projektid.get(i),stage));
                 nupp.getStyleClass().add("button-default");
 
@@ -157,7 +157,7 @@ public class Avaleht extends Application {
                 }
             };
         return event2;}
-    private Button createButton(String text) { //nupu loomise abimeetod
+    private Button looNupp(String text) { //nupu loomise abimeetod
         Button button = new Button(text);
         button.setMinWidth(400);
         button.setMinHeight(70);
